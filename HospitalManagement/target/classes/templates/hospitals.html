@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hospitals</title>
+</head>
+<body>
+<h1>Hospital List</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Pincode</th>
+        <th>Age</th>
+    </tr>
+    <tr th:each="hospital : ${hospitals}">
+        <td th:text="${hospital.id}"></td>
+        <td th:text="${hospital.name}"></td>
+        <td th:text="${hospital.city}"></td>
+        <td th:text="${hospital.pincode}"></td>
+        <td th:text="${hospital.age}"></td>
+    </tr>
+</table>
+<br>
+<a href="/hospitals/add">➕ Add New Hospital</a>
+</body>
+</html>
